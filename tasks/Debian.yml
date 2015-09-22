@@ -12,3 +12,4 @@
     - libsasl2-2
     - libsasl2-dev
     - libcurl3
+  when: nodejs_install_source == 'build'
