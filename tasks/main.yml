@@ -1,5 +1,6 @@
 ---
 - include: install.yml
+  become: yes
 
 - name: Register remote PATH File
   shell: "echo $PATH"
@@ -10,3 +11,4 @@
   with_items: nodejs_global_packages
   environment:
     PATH: "{{ nodejs_path }}/bin:{{ nodejs_path_out.stdout }}"
+  become: yes
